@@ -1,0 +1,35 @@
+﻿@model NetCoreAI.Project2_ApiConsumeUI.Dtos.CreateCustomerDto
+@{
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-lg p-4" style="width: 400px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h3><i class="bi bi-person-plus"></i> Yeni Müşteri Ekle</h3>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-person"></i> Müşteri Adı</label>
+                    <input type="text" asp-for="CustomerName" class="form-control" placeholder="Adınızı girin..." required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-person"></i> Müşteri Soyadı</label>
+                    <input type="text" asp-for="CustomerSurname" class="form-control" placeholder="Soyadınızı girin..." required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-cash-coin"></i> Müşteri Bakiye</label>
+                    <input type="number" asp-for="CustomerBalance" class="form-control" placeholder="Bakiye girin..." min="0" step="0.01" required />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100"><i class="bi bi-check-circle"></i> Müşteriyi Oluştur</button>
+            </form>
+        </div>
+    </div>
+</div>
